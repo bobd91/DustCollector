@@ -1,0 +1,18 @@
+menu "Dust Collector Configuration"
+
+    choice DUST_COLLECTOR_COMPONENT
+        prompt "Dust collector component to build"
+        help
+            Select one of the components to be built.
+            This setting is used in component CMakeLists.txt.
+
+        config DUST_COLLECTOR_CONTROLLER
+            bool "Dust collector system controller"
+        config DUST_COLLECTOR_TOOL
+            bool "Dust collector tool monitor"
+        config DUST_COLLECTOR_GATE
+            bool "Dust collector blast gate controller"
+        config DUST_COLLECTOR_VAC
+            bool "Dust collector vacuum controller"
+    endchoice
+endmenu
